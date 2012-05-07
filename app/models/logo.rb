@@ -4,7 +4,7 @@ class Logo < ActiveRecord::Base
 	def self.getAllLogos
 		logos = Array.new
 		Logo.find_each do |logo|
-			Logos.push(logo)
+			logos.push(logo)
 		end
 		return logos
 	end

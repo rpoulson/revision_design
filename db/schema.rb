@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120505062630) do
+ActiveRecord::Schema.define(:version => 20120507025318) do
 
   create_table "logos", :force => true do |t|
     t.string   "font"
