@@ -1,0 +1,19 @@
+<h2>Logos:</h2>
+<% if @logos != nil %>
+<!-- need to verify this list generation; currently there are no logos saved so it skips to the else -->
+	<ul>
+	<% for l in @logos do %>
+		<li>
+			<% if l.weight == "bold" %>
+ 				<b><font size = "<%= l.size %>" color = "<%= l.color %>" face = "<%= l.font%>">Logo</font></b> 
+			<% elsif l.weight == "italic" %>
+				<i><font size = "<%= l.size %>" color = "<%= l.color %>" face = "<%= l.font%>">Logo</font></i>
+			<% else %>
+				<u><font size = "<%= l.size %>" color = "<%= l.color %>" face = "<%= l.font%>">Logo</font></u>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
+<% else %>
+	<p>There are currently no logos saved.</p>
+<% end %>

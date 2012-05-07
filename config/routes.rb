@@ -2,6 +2,7 @@ RevisionDesign::Application.routes.draw do
   get "creation_page/create"
 	get "creation_page/error"
 	post "creation_page/create"
+  get "manage_page/display"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
