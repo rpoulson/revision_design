@@ -1,10 +1,13 @@
 RevisionDesign::Application.routes.draw do
   get "beanstalk/navigation"
-
+  get "beanstalk/create"
   get "creation_page/create"
 	get "creation_page/error"
 	post "creation_page/create"
+	post "beanstalk/create"
   get "manage_page/display"
+	match '/beanstalkdisplay', to: 'beanstalk#display'
+    match '/beanstalkdisplay/:id', to: 'beanstalk#display'
   post "manage_page/display"
 
   # The priority is based upon order of creation:
