@@ -1,7 +1,4 @@
-<%= form_for(:logo) do |f| %>
-
-
-<%= f.label :font %>
+<%= form_for(:completelogo) do |f| %>
 <%= f.select(:font, options_for_select([['Arial', 'arial'], ['Times', 'times'], ['Courier New', 'courier new'], ['Comic Sans MS', 'comic sans ms'], ['Georgia', 'georgia']])) %>
 
 <%= f.label :size %>
@@ -15,12 +12,10 @@
 <%= f.select(:weight, options_for_select([['Bold', 'bold'], ['Italic', 'italic'], ['Underline', 'underline']])) %>
 
 <%= submit_tag "View", :name =>'view' %>
-
 <% end %>
 
 <h2>Logos:</h2>
 <% if @logos != nil %>
-<!-- need to verify this list generation; currently there are no logos saved so it skips to the else -->
 	<ul>
 	<% for l in @logos do %>
 		<li>
