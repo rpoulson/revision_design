@@ -1,4 +1,6 @@
 RevisionDesign::Application.routes.draw do
+  get "beanstalk/navigation"
+
   get "creation_page/create"
 	get "creation_page/error"
 	post "creation_page/create"
