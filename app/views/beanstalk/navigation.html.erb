@@ -1,3 +1,10 @@
-<h1>Beanstalk#navigation</h1>
+<h1>Navigation</h1>
 
+<h3> Your Revisions </h3>
 
+<ul>
+<% for l in @logos do %>
+  <li>Created at: <%= l.created_at %> <br />   Message: <%= l.message %> <br /> <%= link_to "Show Me!", '/beanstalkdisplay', :target => "_blank", :id => l.id %>!</li> 
+
+<% end %>
+</ul>
