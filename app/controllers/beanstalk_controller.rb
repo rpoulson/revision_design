@@ -16,4 +16,9 @@ class BeanstalkController < ApplicationController
         end
  
     end
+    
+    def display
+        @logo = BeanstalkCompleteLogo.find(params[:id])
+        
+    end
 end

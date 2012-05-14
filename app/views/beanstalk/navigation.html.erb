@@ -4,7 +4,7 @@
 
 <ul>
 <% for l in @logos do %>
-  <li>Created at: <%= l.created_at %> <br />   Message: <%= l.message %> <br /> <%= link_to "Show Me!", '/beanstalkdisplay', :target => "_blank", :id => l.id %>!</li> 
+  <li>Created at: <%= l.created_at %> <br />   Message: <%= l.message %> <br /> <%= link_to "Show Me!", beanstalkdisplay_path(:id => l.id), :target => "_blank"%> <%=l.id %></li> 
 
 <% end %>
 </ul>
