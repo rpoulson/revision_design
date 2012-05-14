@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120507025318) do
+ActiveRecord::Schema.define(:version => 20120514012200) do
+
+  create_table "complete_logos", :force => true do |t|
+    t.string   "font"
+    t.string   "size"
+    t.string   "color"
+    t.string   "weight"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "logos", :force => true do |t|
     t.string   "font"

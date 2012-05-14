@@ -15,7 +15,7 @@
 <%= f.label :weight %>
 <%= f.select(:weight, options_for_select([['Bold', 'bold'], ['Italic', 'italic'], ['Underline', 'underline']])) %>
 
-<%= f.submit "View" %>
+<%= submit_tag "View", :name =>'view' %>
 
 <% end %>
 
@@ -38,6 +38,16 @@ Logo </font>
 <u>Logo</u> </font>
 
 
+<% end %>
+<% end %>
+<% if var!=nil %>
+<%= form_for(:complete_logo) do %>
+<%= hidden_field_tag 'complete_logo[font]', var.font %>
+<%= hidden_field_tag 'complete_logo[size]', var.size %>
+<%= hidden_field_tag 'complete_logo[color]', var.color %>
+<%= hidden_field_tag 'complete_logo[weight]', var.weight %>
+Like it?
+<%= submit_tag "Save", :name =>'save' %>
 <% end %>
 <% end %>
 </p>
