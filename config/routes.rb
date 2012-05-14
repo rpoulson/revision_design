@@ -7,6 +7,7 @@ RevisionDesign::Application.routes.draw do
 	post "beanstalk/create"
   get "manage_page/display"
 	match '/beanstalkdisplay', to: 'beanstalk#display'
+  post "manage_page/display"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
