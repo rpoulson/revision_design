@@ -1,5 +1,5 @@
 class ManagePageController < ApplicationController
 	def display
-		@logos = Logo.getAllLogos
+		@logos = CompleteLogo.find(:all)
 	end
 end
