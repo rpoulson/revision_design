@@ -1,3 +1,5 @@
+
+
 <h1>Create Your Logo</h1>
 <%= form_for(:logo) do |f| %>
 
@@ -37,7 +39,6 @@ Logo </font>
 <font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
 <u>Logo</u> </font>
 
-
 <% end %>
 <% end %>
 <% if var!=nil %>
@@ -53,3 +54,22 @@ Like it?
 <% end %>
 <% end %>
 </p>
+
+<h2>Saved Logos:</h2>
+<% if @logos != nil %>
+	<ol>
+	<% for l in @logos do %>
+		<li>
+			<% if l.weight == "bold" %>
+ 				<b><font size = "<%= l.size %>" color = "<%= l.color %>" face = "<%= l.font%>">Logo</font></b> 
+			<% elsif l.weight == "italic" %>
+				<i><font size = "<%= l.size %>" color = "<%= l.color %>" face = "<%= l.font%>">Logo</font></i>
+			<% else %>
+				<u><font size = "<%= l.size %>" color = "<%= l.color %>" face = "<%= l.font%>">Logo</font></u>
+			<% end %>
+		</li>
+	<% end %>
+	</ol>
+<% else %>
+	<p>There are currently no logos saved.</p>
+<% end %>
