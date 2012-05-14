@@ -24,30 +24,29 @@
 <p>
 <% var = @render_logo %>
 <% if var!= nil %>
-<% if var.weight == "bold" %>
- <font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
-<b>Logo </b></font> 
-<% elsif var.weight == "italic" %>
-<i>
-<font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
-Logo </font>
-</i>
-<% else %>
+	<% if var.weight == "bold" %>
+ 		<font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
+		<b>Logo </b></font> 
+	<% elsif var.weight == "italic" %>
+		<i>
+		<font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
+		Logo </font>
+		</i>
+	<% else %>
 
-<font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
-<u>Logo</u> </font>
-
-
+		<font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
+		<u>Logo</u> </font>
+	<% end %>
 <% end %>
-<% end %>
+
 <% if var!=nil %>
-<%= form_for(:complete_logo) do %>
-<%= hidden_field_tag 'complete_logo[font]', var.font %>
-<%= hidden_field_tag 'complete_logo[size]', var.size %>
-<%= hidden_field_tag 'complete_logo[color]', var.color %>
-<%= hidden_field_tag 'complete_logo[weight]', var.weight %>
-Like it?
-<%= submit_tag "Save", :name =>'save' %>
+	<%= form_for(:complete_logo) do %>
+	<%= hidden_field_tag 'complete_logo[font]', var.font %>
+	<%= hidden_field_tag 'complete_logo[size]', var.size %>
+	<%= hidden_field_tag 'complete_logo[color]', var.color %>
+	<%= hidden_field_tag 'complete_logo[weight]', var.weight %>
+	Like it?
+	<%= submit_tag "Save", :name =>'save' %>
 <% end %>
 <% end %>
 </p>

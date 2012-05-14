@@ -1,18 +1,23 @@
+<h1>View Your Designs</h1>
+
+
 <%= form_for(:completelogo) do |f| %>
-<%= f.select(:font, options_for_select([['Arial', 'arial'], ['Times', 'times'], ['Courier New', 'courier new'], ['Comic Sans MS', 'comic sans ms'], ['Georgia', 'georgia']])) %>
+
+<%= f.label :font %>
+<%= f.select(:font, options_for_select([['-', '-'], ['Arial', 'arial'], ['Times', 'times'], ['Courier New', 'courier new'], ['Comic Sans MS', 'comic sans ms'], ['Georgia', 'georgia']])) %>
 
 <%= f.label :size %>
-<%= f.select(:size, options_for_select([['1', '1'], ['2', '2'], ['4', '4'], ['6', '6'], ['7', '7']])) %>
+<%= f.select(:size, options_for_select([['-', '-'], ['1', '1'], ['2', '2'], ['4', '4'], ['6', '6'], ['7', '7']])) %>
 
 <%= f.label :color %>
-<%= f.select(:color, options_for_select([['Red', 'red'], ['Blue', 'blue'], ['Green', 'green'], ['Yellow', 'yellow'], ['Gray', 'gray']])) %>
-
+<%= f.select(:color, options_for_select([['-', '-'], ['Red', 'red'], ['Blue', 'blue'], ['Green', 'green'], ['Yellow', 'yellow'], ['Gray', 'gray']])) %>
 
 <%= f.label :weight %>
-<%= f.select(:weight, options_for_select([['Bold', 'bold'], ['Italic', 'italic'], ['Underline', 'underline']])) %>
+<%= f.select(:weight, options_for_select([['-', '-'], ['Bold', 'bold'], ['Italic', 'italic'], ['Underline', 'underline']])) %>
 
 <%= submit_tag "View", :name =>'view' %>
 <% end %>
+
 
 <h2>Logos:</h2>
 <% if @logos != nil %>
