@@ -13,6 +13,12 @@ class CreationPageController < ApplicationController
           @logos = CompleteLogo.find(:all)
           render 'create'
       end
-      
   end
+    
+    def load
+        @url = MemeUrl.new(params[:url])
+        @url.save
+        @urls = MemeUrl.find(:all)
+        render 'load'
+    end
 end

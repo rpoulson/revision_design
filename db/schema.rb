@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120514033351) do
+ActiveRecord::Schema.define(:version => 20120517023010) do
 
   create_table "beanstalk_complete_logos", :force => true do |t|
     t.string   "font"
@@ -37,6 +37,20 @@ ActiveRecord::Schema.define(:version => 20120514033351) do
     t.string   "size"
     t.string   "color"
     t.string   "weight"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "meme_urls", :force => true do |t|
+    t.string   "url"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "memes", :force => true do |t|
+    t.string   "color"
+    t.string   "text"
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

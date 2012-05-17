@@ -1,0 +1,25 @@
+<h3> Please save the url of your Meme. </h3>
+<p> Please highlight the url, select copy, and then paste it into the textbox.</p>
+<%= form_for(:url) do |f| %>
+
+<table>
+
+<tr>
+<td>
+<b> Meme URL: </b>
+</td>
+
+<td>
+<%= f.text_area :url %>
+</td>
+</tr>
+
+</table>
+<%= submit_tag "Submit", :name =>'submit' %>
+<% end %>
+
+<ol>
+<% for l in @urls do %>
+    <li><%= l.url %></li>
+<% end %>
+</ol>
