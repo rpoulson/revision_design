@@ -11,13 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120517023010) do
+ActiveRecord::Schema.define(:version => 20120517031415) do
 
   create_table "beanstalk_complete_logos", :force => true do |t|
     t.string   "font"
     t.string   "size"
     t.string   "color"
     t.string   "weight"
+    t.string   "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "beanstalk_memes", :force => true do |t|
+    t.string   "color"
+    t.string   "text"
+    t.string   "name"
+    t.string   "image"
+    t.string   "message"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "beanstalk_urls", :force => true do |t|
+    t.string   "url"
     t.string   "message"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -51,6 +68,7 @@ ActiveRecord::Schema.define(:version => 20120517023010) do
     t.string   "color"
     t.string   "text"
     t.string   "name"
+    t.string   "image"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

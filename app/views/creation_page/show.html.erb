@@ -1,0 +1,11 @@
+<h3> URLs </h3>
+
+<% if @urls != nil %>
+    <ol>
+    <% for l in @urls do %>
+        <li><%= l.url %></li>
+    <% end %>
+    </ol>
+<% else %>
+    <p> There are currently no urls saved. </p>
+<% end %>

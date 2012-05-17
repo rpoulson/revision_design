@@ -1,3 +1,3 @@
 class Meme < ActiveRecord::Base
-  attr_accessible :color, :name, :text
+  attr_accessible :color, :image, :name, :text
 end

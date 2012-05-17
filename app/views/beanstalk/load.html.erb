@@ -10,7 +10,17 @@
 </td>
 
 <td>
-<%= f.text_area :url %>
+<%= f.text_field :url %>
+</td>
+</tr>
+
+<tr>
+<td>
+<b> Message </b>
+</td>
+
+<td>
+<%= f.text_field :message %>
 </td>
 </tr>
 
@@ -22,7 +32,7 @@
 <% if @urls != nil %>
     <ol>
     <% for l in @urls do %>
-        <li><%= l.url %></li>
+        <li><%= l.url %> : <%= l.message %></li>
     <% end %>
     </ol>
 <% else %>

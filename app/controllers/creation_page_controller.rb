@@ -21,4 +21,15 @@ class CreationPageController < ApplicationController
         @urls = MemeUrl.find(:all)
         render 'load'
     end
+    
+    def save
+        @meme = Meme.new(params[:meme])
+        @meme.save
+        @memes = Meme.find(:all)
+        render 'save'
+    end
+    
+    def show
+       @urls = MemeUrl.find(:all) 
+    end
 end

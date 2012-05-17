@@ -5,9 +5,11 @@ one:
   text: MyString
   name: MyString
   image: MyString
+  message: MyString
 
 two:
   color: MyString
   text: MyString
   name: MyString
   image: MyString
+  message: MyString

@@ -22,4 +22,23 @@ class BeanstalkController < ApplicationController
         @logo = BeanstalkCompleteLogo.find(params[:id])
         
     end
+    
+    def load
+        @url = BeanstalkUrl.new(params[:url])
+        @url.save
+        @urls = BeanstalkUrl.find(:all)
+        render 'load'
+    end
+    
+    def save
+        @meme = BeanstalkMeme.new(params[:beanstalk_meme])
+        @meme.save
+        @beanstalk_memes = BeanstalkMeme.find(:all)
+        render 'save'
+    end
+    
+    def show
+        @urls = BeanstalkMeme.find(:all) 
+    end
+
 end

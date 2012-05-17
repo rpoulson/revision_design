@@ -1,0 +1,32 @@
+<h3> Please enter characteristics </h3>
+
+<%= form_for(:beanstalk_meme) do |f| %>
+
+<%= f.label :color %>
+<%= f.text_field :color %>
+
+<%= f.label :text %>
+<%= f.text_field :text %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :image %>
+<%= f.text_field :image %>
+
+<%= f.label :message %>
+<%= f.text_field :message %>
+
+<%= submit_tag "Save", :name =>'save' %>
+
+<% end %>
+
+<% if @beanstalk_memes != nil %>
+    <ol>
+    <% for l in @beanstalk_memes do %>
+        <li><%= l.text %></li>
+    <% end %>
+    </ol>
+<% else %>
+    <p> There are currently no urls saved. </p>
+<% end %>
