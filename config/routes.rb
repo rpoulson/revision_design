@@ -1,5 +1,6 @@
 RevisionDesign::Application.routes.draw do
   get "beanstalk/navigation"
+  post "beanstalk/navigation"
   get "beanstalk/create"
   get "creation_page/create"
     get "creation_page/save"
@@ -21,6 +22,9 @@ RevisionDesign::Application.routes.draw do
     post "beanstalk/save"
     get "beanstalk/show"
     post "beanstalk/show"
+
+  get "original/navigation"
+  post "original/navigation"
     
   post "manage_page/display"
 

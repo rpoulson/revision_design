@@ -27,11 +27,10 @@
 	</table>
 	<%= submit_tag "View", :name =>'view' %>
 <% end %>
-
 <h3> Your Revisions </h3>
 
 <ul>
-<% for meme in @results do %>
-  <li>Created at: <%= meme.created_at %> <br />   Message: <%= meme.message %> <br /> <%= link_to "Show Me!", beanstalkdisplay_path(:id => meme.id), :target => "_blank"%> <%=meme.id %></li> 
-<% end %>
+	<% for meme in @results do %>
+		<li> <%= image_tag meme.name %></li>
+	<% end %>
 </ul>
