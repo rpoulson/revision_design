@@ -1,21 +1,7 @@
-<h1> Your logo </h1>
+<h1> Your Meme </h1>
 
-<% var = @logo %>
+<% var = @meme %>
 
 <% if var!= nil %>
-<% if var.weight == "bold" %>
- <font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
-<b>Logo </b></font> 
-<% elsif var.weight == "italic" %>
-<i>
-<font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
-Logo </font>
-</i>
-<% else %>
-
-<font size = "<%= var.size %>" color = "<%= var.color %>" face = "<%= var.font%>">
-<u>Logo</u> </font>
-
-
-<% end %>
+    <%= image_tag var.image %>
 <% end %>

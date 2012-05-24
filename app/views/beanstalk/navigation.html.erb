@@ -1,32 +1,5 @@
 <h1>Navigation</h1>
 
-<h3> Select search criteria: </h3>
-<%= form_for(:meme) do |f| %>
-	<table>
-		<tr>
-			<th>Colors:</th>
-			<th>Images:</th>
-			<th>Text:</th>
-		</tr>
-		<tr>	
-			<td>
-				<ul><% @color_entries.each do |color| %>
-					<li><%= check_box_tag 'colors[]', color -%><%= h color -%></li>
-				<% end %> </ul>
-			</td>
-			<td>
-				<ul><% @image_entries.each do |image| %>
-					<li><%= check_box_tag 'images[]', image -%><%= h image -%></li>
-				<% end %> </ul>
-			</td>
-			<td>
-				<ul><% @text_entries.each do |text| %>
-					<li><%= check_box_tag 'text[]', text -%><%= h text -%></li>
-				<% end %> </ul>
-			</td>
-	</table>
-	<%= submit_tag "View", :name =>'view' %>
-<% end %>
 
 <h3> Your Revisions </h3>
 

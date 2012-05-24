@@ -72,7 +72,7 @@ class BeanstalkController < ApplicationController
     end
     
     def display
-        @logo = BeanstalkCompleteLogo.find(params[:id])
+        @meme = BeanstalkMeme.find(params[:id])
         
     end
     
@@ -91,7 +91,7 @@ class BeanstalkController < ApplicationController
     end
     
     def show
-        @urls = BeanstalkMeme.find(:all) 
+        @urls = BeanstalkUrl.find(:all) 
     end
 
 end
